@@ -1,0 +1,16 @@
+{% block body_block %}
+<h1>Latest News</h1>
+<br><br>
+{% if articles %}
+{% for article in articles %}
+<h2>{{ article.title }}</h2>
+<p>{{ article.date_published }}</p>
+<p>{{ article.content }}</p>
+{% endfor %}
+
+{% else %}
+<h2>There is no news</h2>
+{% endif %}
+
+
+{% endblock %}
